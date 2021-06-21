@@ -43,3 +43,17 @@ func Test_fooC(t *testing.T) {
 		}
 	})
 }
+
+func Test_fooD(t *testing.T) {
+	arr := []float64{1.23, 2.32, 4.53, 7.23, 1.22, 1.11}
+
+	t.Run("Test_fooD", func(t *testing.T) {
+		a, b, err := fooD(arr)
+		if err != nil {
+			t.Errorf("fooD() error: %s", err)
+		}
+		if a != 7.23 || b != 4.53 {
+			t.Errorf("fooD() sort arr fail.")
+		}
+	})
+}
